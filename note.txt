@@ -1,0 +1,9 @@
+gem "twitter-bootstrap-rails"
+################################cannot delete in window
+app/assets/javascripts/applcation.js 
+remove 
+  //= require turbolink
+  //= require tree .
+reference 
+  http://stackoverflow.com/questions/8779414/unknown-action-the-action-show-could-not-be-found-for-micropostscontroller
+################################

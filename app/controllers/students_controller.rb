@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-    before_action :get_students, only: [:edit, :update, :destroy, :show]
+    before_action :get_student, only: [:edit, :update, :destroy, :show]
     def index
         @students = Student.all
     end
@@ -13,7 +13,7 @@ class StudentsController < ApplicationController
         
     end
 
-    def get_students
+    def get_student
         @student = Student.find(params[:id])
     end
 end
