@@ -7,8 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="main" class="container-fluid">
+    <div class="row col-sm-11 center-block">
+      <div class="col-sm-12 card form-horizontal">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

@@ -1,0 +1,8 @@
+<h1>Editing <%=@student.first_name%> <%=@student.last_name%>
+  <%= link_to(root_path, class: "btn pull-right") do %>
+  <i class="fa fa-home fa-2x"></i>
+  <%end%>
+</h1>
+<hr>
+
+<%= render 'form' %>

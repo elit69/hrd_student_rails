@@ -1,4 +1,43 @@
-<%=@student.id%><br/>
-<%=@student.first_name%><br/>
-<%=@student.last_name%><br/>
-<%=@student.classroom%><br/>
+<h1>Show Student
+  <%= link_to(root_path, class: "btn pull-right") do %>
+  <i class="fa fa-home fa-2x"></i>
+  <%end%>
+</h1>
+<hr>
+
+
+<div class="col-sm-12 ">
+  <div class="col-sm-8 center-block" style="margin-bottom: 40px;">
+    <div class="form-group">
+      <label class="col-sm-3">ID:</label>
+      <div class="col-sm-9">
+        <%= number_field_tag 'stu_id', @student.id, class: "form-control", 
+        readonly: true %>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-3">First Name:</label>
+      <div class="col-sm-9">
+        <%= text_field_tag 'stu_first_name', @student.first_name, class: "form-control", 
+        readonly: true %>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-3">Last Name:</label>
+      <div class="col-sm-9">
+        <%= text_field_tag 'stu_last_name', @student.last_name, class: "form-control", 
+        readonly: true %>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-3">Classroom: </label>
+      <div class="col-sm-9">
+        <%= text_field_tag 'stu_classroom', @student.classroom, class: "form-control", 
+        readonly: true %>
+      </div>
+    </div>
+  </div>
+  <%= link_to(edit_student_path(@student), class: "btn btn-primary center-block", style: "width: 200px") do %>
+  <i class="fa fa-pencil"></i>&nbsp;&nbsp;Edit
+  <%end%>
+</div>

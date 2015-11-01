@@ -4,16 +4,33 @@ class StudentsController < ApplicationController
         @students = Student.all
     end
 
+    def new 
+        @student = Student.new
+    end
+
+    def create
+        @student = Student.create(student_params)        
+        #sleep 1
+        redirect_to action: :index
+    end
+
+    def update
+        @student.update(student_params)
+        redirect_to action: :index
+    end
+
     def destroy
         @student.destroy
         redirect_to action: :index
     end
 
-    def show
-        
-    end
+####################################################
 
     def get_student
         @student = Student.find(params[:id])
     end
+
+    def student_params
+        params.require(:student).permit([:first_name, :last_name, :classroom])
+    end  
 end
