@@ -10,7 +10,6 @@ class StudentsController < ApplicationController
 
     def create
         @student = Student.create(student_params)        
-        #sleep 1
         redirect_to action: :index
     end
 

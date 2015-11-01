@@ -1,4 +1,6 @@
 gem "twitter-bootstrap-rails"
+#################################
+http://localhost:3000/rails/info/routes#
 ################################cannot delete in window
 app/assets/javascripts/applcation.js 
 remove 
@@ -44,3 +46,13 @@ reference
   <%end%>
 </div>
 <%end%>
+###################so button (type submit) can function as input (type submit)
+<%= f.button class: "btn btn-primary center-block", style: "width: 200px"  %>
+<%= f.submit class: "btn btn-primary center-block", style: "width: 200px" %>
+####################check current controller#action in view
+@_controller.action_name 
+current_page?(action: 'edit')
+####################output html tag not string
+"".html_safe           $$$$$$when return from helper
+  or
+raw helper_method      $$$$$$use on view
